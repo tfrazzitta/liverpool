@@ -15,6 +15,6 @@ app.use(express.static("./public"));
 app.post('/profile', function (req, res, next) {})
 
 app.listen(3000, function() {
-  console.log("App running on port "+ PORT);
+  console.log("App running on port "+ port);
 });
 
