@@ -14,7 +14,7 @@ app.use(express.static("./public"));
 //app.get("/qr", function(req, res) {res.sendFile(path.join(__dirname, "../suites/qr.html"));});
 app.post('/profile', function (req, res, next) {})
 
-app.listen(3000, function() {
+app.listen(port, function() {
   console.log("App running on port "+ port);
 });
 
