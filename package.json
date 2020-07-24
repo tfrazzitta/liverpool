@@ -3,7 +3,7 @@
   "name": "liverpool",
   "version": "4.2.2",
   "scripts": {
-    "start": "gulp watch"
+    "start": "node server.js"
   },
   "description": "A shop homepage HTML template built with Bootstrap",
   "keywords": [
@@ -38,5 +38,5 @@
     "gulp": "4.0.2",
     "merge-stream": "2.0.0"
   },
-  "main": "gulpfile.js"
+  "main":"server.js"
 }
