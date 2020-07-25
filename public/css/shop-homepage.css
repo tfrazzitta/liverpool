@@ -45,14 +45,29 @@ and (min-device-width : 1100px) {
 	width:900px;
 }
 
+/*index2*/
 .card-img, .card-img-top{
   height: 250px;
 /*  width: 250px;*/
 }
 
+/*contact page*/
 .container-contact2{
 	zoom:75% !important;
 	padding-top: 50px !important;
 }
 
+/*index*/
+#main-banner{
+height: 55vh;
+}
+
+
+
+#row{
+  margin-left: 145px !important;
+  zoom:80% !important;
+  width: 80% !important;
+ 
+}
 /* STYLES GO HERE */}

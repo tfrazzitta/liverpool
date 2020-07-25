@@ -72,14 +72,15 @@
 
     <div class="row">
 
-      <div class="col-lg-2">
+      <div class="col-lg-1">
 
-        <h2 class="my-4">Game Day</h2>
-        <div class="list-group">
-          <a href="#" class="list-group-item">Category 1</a>
+      <!--   <h4 class="my-4">Merchandise</h4> -->
+        <!-- <div class="list-group">
+        <img src="https://cdn.worldvectorlogo.com/logos/liverpool-fc.svg" class="img-fluid"> -->
+         <!--  <a href="#" class="list-group-item">Category 1</a>
           <a href="#" class="list-group-item">Category 2</a>
-          <a href="#" class="list-group-item">Category 3</a>
-        </div>
+          <a href="#" class="list-group-item">Category 3</a> -->
+       <!--  </div> -->
 
       </div>
       <!-- /.col-lg-3 -->
@@ -112,7 +113,8 @@
             <span class="sr-only">Next</span>
           </a>
         </div>
-
+      </div>
+       <div class="col-lg-1"></div>
         <div class="row" id="row">
 
 <!-- ///item one -->
@@ -121,7 +123,7 @@
 {{#each merchandise}}
           <div class="col-lg-4 col-md-6 mb-4 click" id="{{id}}" num="{{@index}}">
             <div class="card h-100">
-              <a href="#"><img class="card-img-top img-fluid" src="{{src}}"></a>
+              <a href="#"><img class="card-img-top img-fluid" src="{{src}}"></a><hr>
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="#" class="click-item" >{{item}}</a>
@@ -130,7 +132,7 @@
                 <p class="card-text">{{text}}</p>
               </div>
               <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                <small class="text-muted text-center">{{{buyNow}}}</small>
               </div>
             </div>
           </div>
@@ -246,20 +248,20 @@
   <script src="js/index.js"></script>
 <script>
 $(".col-lg-12").click(function(e) { e.stopPropagation(); });
-    var count =1;
+    var count =0;
     $(document).on("click","#img",function() {
-count++;
     
-     console.log(count);
      var alt = $(this).attr("alt");
-    var src = $(this).attr("src");
+     var src = $(this).attr("src");
+     console.log(src)
      if(alt===""){return false}
-     if(count%2==0){
+     if(src==="/images/hoodie-back.jpg"){
       $(this).attr("src",alt)
       $(this).attr("alt",src)
      } 
-     else{
-      count=1  
+     else{ 
+      console.log(alt)
+      console.log("h")
       $(this).attr("alt",alt)
       $(this).attr("src",src)
         }
