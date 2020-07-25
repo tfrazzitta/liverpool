@@ -17,73 +17,35 @@
   <link href="css/shop-item.css" rel="stylesheet">
    <link href="css/shop-homepage.css" rel="stylesheet">
    <script src="vendor/jquery/jquery.min.js"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
 
 </head>
 
 <body>
+
   <div id="nav"></div>
   <script>$("#nav").load("nav.html")</script>
-  <!-- Navigation -->
-<!--   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-    
-     <img src="https://scontent.fewr1-5.fna.fbcdn.net/v/t1.0-9/82915475_2467251203592349_5039009868237766656_n.jpg?_nc_cat=111&_nc_sid=09cbfe&_nc_ohc=zsNQYoCKs2IAX9A8JLJ&_nc_ht=scontent.fewr1-5.fna&oh=1657ffe126d9553291b206069508cbc0&oe=5F3DD4EA" alt="Liverpool FC" style="width: 6%;border-radius:50%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            
-      <a class="navbar-brand" href="#">OLSC New Jersey Shore </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="/">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/index2.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link icon-facebook" href="https://www.facebook.com/LFCJerseyShore/photos/?ref=page_internal">Facebook</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Schedule</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/contact.html">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/board.html">The Board</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/">Meetings</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
- -->
+
   <!-- Page Content -->
 
   <div class="container">
+  <div class="row">
+      <div class="col-lg-12 my-4 text-center"><h2>Meet your Board Members</h2>
+      </div>
+  </div>
 
     <div class="row">
-
-      <div class="col-lg-3 card mt-4" style="border:none;">
-  <div id="fs-upcoming"></div> <script> (function (w,d,s,o,f,js,fjs) { w['fsUpcomingEmbed']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) }; js = d.createElement(s), fjs = d.getElementsByTagName(s)[0]; js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs); }(window, document, 'script', 'fsUpcoming', 'https://cdn.footystats.org/embeds/upcoming.js')); fsUpcoming('params', { teamID: 151 }); </script><br>
-
-<div id="fs-standings"></div> <script> (function (w,d,s,o,f,js,fjs) { w['fsStandingsEmbed']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) }; js = d.createElement(s), fjs = d.getElementsByTagName(s)[0]; js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs); }(window, document, 'script', 'mw', 'https://cdn.footystats.org/embeds/standings.js')); mw('params', { leagueID: 2012 }); </script>
-     <!--    <h1 class="my-4">Next Match</h1>
+      <div class="col-lg-2">
+        <h1 class="my-4">Next Match</h1>
         <div class="list-group">
           <h5 class="list-group-item">vs: Chelsea</h5>
           <h6 class="list-group-item">Wednesday 7/24 @ 3pm </h6>
           <a href="https://www.mapquest.com/us/new-jersey/jimbos-bar-and-grill-291738676" target="_blank" class="list-group-item">Where: Jimbos Bar and grill</a>
-        </div> -->
+        </div>
       </div>
       <!-- /.col-lg-3 -->
 
-      <div class="col-lg-9">
+      <div class="col-lg-8">
 
 
 
@@ -100,9 +62,9 @@
 
         <!-- /.card -->
 
-        <div class="card card-outline-secondary my-4" style="margin-top: 2.5rem!important">
-          <div class="card-header text-center navbar-brand" style="white-space: initial !important" >
-            Official Supporter's Club of the Jersey Shore 
+        <div class="card card-outline-secondary my-4">
+          <div class="card-header">
+            Product Reviews
           </div>
           <div class="card-body">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
@@ -119,10 +81,10 @@
         </div>
         <!-- /.card -->
 
-      </div>
-
+    
+ </div>
       <!-- /.col-lg-9 -->
-
+ <div class="col-lg-2 card mt-4" style="border: none"> </div>
     </div>
 
   </div>

@@ -1,6 +1,7 @@
 var Arrayposition;
 
 $(document).on("click",".click",function() {
+//$("#img").addClass("closer")
 $(".content-placeholder").empty();
 Arrayposition= $(this).attr('num');
 console.log(context.merchandise[Arrayposition])
@@ -13,7 +14,6 @@ $(".content-placeholder").append(theCompiledHtml);
 $('#exampleModal').modal('toggle');
 
 })
-
 
 
 

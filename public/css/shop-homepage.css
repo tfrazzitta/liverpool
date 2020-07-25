@@ -8,11 +8,13 @@ body {
 }
 
 
-.bg-dark {
+.bg-dark,.card-header,#close-modal {
     /* background-color: #343a40!important; */
     background-color: #e31b23 !important;
     border-top: 4px solid #b8161f;
     border-bottom: 5px solid #b8161f;
+    color:white;
+
 }
 
 .mt-4, .my-4 {

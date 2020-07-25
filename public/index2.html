@@ -22,10 +22,10 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
    
 <body>
-<script id="example-template-1" type="text/x-handlebars-template">
+<!-- <script id="example-template-1" type="text/x-handlebars-template"> -->
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
     
      <img src="https://scontent.fewr1-5.fna.fbcdn.net/v/t1.0-9/82915475_2467251203592349_5039009868237766656_n.jpg?_nc_cat=111&_nc_sid=09cbfe&_nc_ohc=zsNQYoCKs2IAX9A8JLJ&_nc_ht=scontent.fewr1-5.fna&oh=1657ffe126d9553291b206069508cbc0&oe=5F3DD4EA" alt="Liverpool FC" style="width: 6%;border-radius:50%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -62,9 +62,12 @@
         </ul>
       </div>
     </div>
-  </nav>
+  </nav> -->
 
   <!-- Page Content -->
+  <div id="nav"></div>
+  <script>$("#nav").load("nav.html")</script>
+  <script id="example-template-1" type="text/x-handlebars-template">
   <div class="container">
 
     <div class="row">
@@ -140,6 +143,7 @@
 
   </div>
   <!-- /.container -->
+
 <div class="content-placeholder"></div>
 
 <script id="example-template" type="text/x-handlebars-template">
@@ -163,18 +167,20 @@
       
       <!-- /.col-lg-3 -->
       <div class="col-lg-12">
-
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">X</button>
         <div class="card mt-4" >
           <img class="card-img-top img-fluid" src="{{this.src}}" alt="{{this.alt}}" id="img">
           <div class="card-body" id="mer">
-
+ 
             <h3 class="card-title">{{this.item}}</h3>
             <h4>{{this.price}}</h4>
             <p class="card-text">{{this.text}}</p>
+            {{{this.buyNow}}}
             <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
             4.0 stars
           </div>
         </div>
+
 
         <!-- /.card -->
 
@@ -209,12 +215,12 @@
       </div>
    
       </div>
-    </div>
+ <!--    </div> -->
 <!--    <div class="modal-footer">
-        <button type="button" id="close-modal" class="btn btn-secondary" data-dismiss="modal" style="font-family:Playfair Display;background-color: #f23a2e;color:#fff!important">Close</button>
-  </div>      -->    
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+  </div>       -->   
 <!-- MOdal -->
-
+</div>
 </script>
 <!-- </div> -->
 <style>
@@ -237,15 +243,27 @@
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="js/context.js"></script>
-  <script src="js/index.js">
+  <script src="js/index.js"></script>
+<script>
+$(".col-lg-12").click(function(e) { e.stopPropagation(); });
+    var count =1;
+    $(document).on("touchstart","#img",function() {
+count++;
     
-    $(document).on("click","#img",function() {
-  console.log("hello")
-    var alt = $(this).attr("alt");
-    var img = $(this).attr("src");
-    console.log(img)
-    $(this).attr("src",alt)
-    $(this).attr("alt",src)
+     console.log(count);
+     var alt = $(this).attr("alt");
+    var src = $(this).attr("src");
+     if(alt===""){return false}
+     if(count%2==0){
+      $(this).attr("src",alt)
+      $(this).attr("alt",src)
+     } 
+     else{
+      count=1  
+      $(this).attr("alt",alt)
+      $(this).attr("src",src)
+        }
+   
 
     })
   </script>
