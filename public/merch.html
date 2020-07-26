@@ -176,10 +176,10 @@
  
             <h3 class="card-title">{{this.item}}</h3>
             <h4>{{this.price}}</h4>
-            <p class="card-text">{{this.text}}</p>
+            <p class="card-text text">{{this.text}}</p>
             {{{this.buyNow}}}
-            <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
-            4.0 stars
+          <!--   <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
+            4.0 stars -->
           </div>
         </div>
 
@@ -254,16 +254,18 @@ $(".col-lg-12").click(function(e) { e.stopPropagation(); });
      var alt = $(this).attr("alt");
      var src = $(this).attr("src");
      console.log(src)
-     if(alt===""){return false}
-     if(src==="/images/hoodie-back.jpg"){
-      $(this).attr("src",alt)
-      $(this).attr("alt",src)
+      if(alt===""){return false}
+    // if(src==="/images/hoodie-back.jpg"){
+      if(count==0){
+       console.log("yes")
+       $(this).attr("src",alt)
+       $(this).attr("alt",src)
+       count++;
      } 
      else{ 
-      console.log(alt)
-      console.log("h")
-      $(this).attr("alt",alt)
-      $(this).attr("src",src)
+      $(this).attr("alt",src)
+      $(this).attr("src",alt)
+      count=0;
         }
    
 

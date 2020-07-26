@@ -7,6 +7,10 @@ body {
   padding-top: 56px;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
 .bg-dark,.card-header,#close-modal {
     /* background-color: #343a40!important; */
@@ -22,11 +26,6 @@ body {
 }
 
 
-
-
-  .carousel-item {padding-left: 10px;}
-
-
 .container-contact2,.contact2-form-btn{
 	background: linear-gradient(45deg, #e31b23, rgba(229,57,53,0.8))!important;
 }
@@ -36,6 +35,14 @@ body {
 textarea.input2 {
 min-height: 0px !important;
 }
+
+
+.card-footer {
+    background-color: #343a40!important;
+ /*   border-top: 1px solid rgba(0,0,0,.125);*/
+    border-top: 9px solid #b8161f;
+    border-bottom: 9px solid #b8161f;
+  }
   
 
   @media only screen 
@@ -63,11 +70,13 @@ height: 55vh;
 }
 
 
-
 #row{
-  margin-left: 145px !important;
+  margin-left: 145px ;
   zoom:80% !important;
   width: 80% !important;
  
 }
+
+/*main banner*/
+  .carousel-item {padding-left: 10px;}
 /* STYLES GO HERE */}
