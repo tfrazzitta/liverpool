@@ -35,80 +35,55 @@
 <body style="background: linear-gradient(45deg, #e31b23, rgba(229,57,53,0.8))!important;">
 <div id="nav"></div>
   <script>$("#nav").load("nav.html")</script>
- <!-- Navigation -->
- <!--  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-    
-     <img src="https://scontent.fewr1-5.fna.fbcdn.net/v/t1.0-9/82915475_2467251203592349_5039009868237766656_n.jpg?_nc_cat=111&_nc_sid=09cbfe&_nc_ohc=zsNQYoCKs2IAX9A8JLJ&_nc_ht=scontent.fewr1-5.fna&oh=1657ffe126d9553291b206069508cbc0&oe=5F3DD4EA" alt="Liverpool FC" style="width: 6%;border-radius:50%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            
-      <a class="navbar-brand" href="#">OLSC New Jersey Shore </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="/">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/index2.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link icon-facebook" href="https://www.facebook.com/LFCJerseyShore/photos/?ref=page_internal">Facebook</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Schedule</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav> -->
-
-
-
-
-
-
-
 
 
 	<div class="bg-contact2" style="background-image: url('https://scontent.fewr1-5.fna.fbcdn.net/v/t1.0-9/82915475_2467251203592349_5039009868237766656_n.jpg?_nc_cat=111&_nc_sid=09cbfe&_nc_ohc=zsNQYoCKs2IAX9A8JLJ&_nc_ht=scontent.fewr1-5.fna&oh=1657ffe126d9553291b206069508cbc0&oe=5F3DD4EA');">
 		<div class="container-contact2">
 			<div class="wrap-contact2">
-				<form class="contact2-form validate-form">
+<form class="contact2-form validate-form" action="/email" method="post" id=form>
 					<span class="contact2-form-title">
 						Contact Us
 					</span>
 
-					<div class="wrap-input2 validate-input" data-validate="Name is required">
-						<input class="input2" type="text" name="name">
+
+<div class="row" style="margin-top: -50px;margin-bottom:30px">
+		 <div class="col-lg-8">
+	<input type="radio" id="male" name="membership" value="YES"> &nbsp; &nbsp; &nbsp; I am interested in an LFC Membership
+<!-- 	<input type="radio" id="male" name="membership1" value="NO"> &nbsp; &nbsp; &nbsp; I am NOT interested in an LFC Membership -->
+			</div>
+		<div class="col-lg-4">
+	<!-- <label for="male">I am interested in an LFC Membership</label> -->
+	<!-- <input type="radio" id="female" name="gender" value="female">&nbsp; &nbsp; &nbsp;No, I am not interested in an LFC Membership -->
+		</div>
+	<!-- <label for="female">No, I am not interested in an LFC Membership</label><br> </div> -->
+</div>
+						<div class="wrap-input2 validate-input" data-validate="Name is required">
+						<input class="input2" type="text" name="name" id="name">
 						<span class="focus-input2" data-placeholder="NAME"></span>
 					</div>
 
 					<div class="wrap-input2 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input2" type="text" name="email">
+						<input class="input2" type="text" name="email" id="email">
 						<span class="focus-input2" data-placeholder="EMAIL"></span>
 					</div>
 
 					<div class="wrap-input2 validate-input" data-validate = "Message is required">
-						<textarea class="input2" name="message"></textarea>
+						<textarea class="input2" name="message" id="message"></textarea>
 						<span class="focus-input2" data-placeholder="MESSAGE"></span>
 					</div>
 
 					<div class="container-contact2-form-btn">
 						<div class="wrap-contact2-form-btn">
 							<div class="contact2-form-bgbtn"></div>
-							<button class="contact2-form-btn">
+							<!-- <button class="contact2-form-btn">
 								Send Your Message
-							</button>
+							</button> -->
 						</div>
 					</div>
-				</form>
+				
+		      <button class="contact2-form-btn" style="width: 250px; margin: 0 auto;" id="form-btn">Send Your Message </button>
+			</form><br>
+				 <h3 id ="error-form-replace" class="text-center"></h3><br>
 			</div>
 		</div>
 	</div>
@@ -134,7 +109,27 @@
 	  gtag('js', new Date());
 
 	  gtag('config', 'UA-23581568-13');
+
+
+
+    $( "#form" ).submit(function( event ) {
+    	var color =$('.alert-validate').css("color")
+
+		if(color ==='rgb(33, 37, 41)'){
+			return false;
+		}
+		else{
+
+    		$("#error-form-replace").html("Message Sent")
+
+		}
+    });
+
 	</script>
+
+
+
+
 
 </body>
 </html>

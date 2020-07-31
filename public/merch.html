@@ -121,9 +121,9 @@
 <!--  <div class="boom"></div> -->
 <!-- <script id="example-template-1" type="text/x-handlebars-template"> -->
 {{#each merchandise}}
-          <div class="col-lg-4 col-md-6 mb-4 click" id="{{id}}" num="{{@index}}">
+          <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="#"><img class="card-img-top img-fluid" src="{{src}}"></a><hr>
+              <a href="#"><img class="card-img-top img-fluid click" src="{{src}}" id="{{id}}" num="{{@index}}"></a><hr>
               <div class="card-body">
                 <h4 class="card-title">
                   <a href="#" class="click-item" >{{item}}</a>
@@ -248,6 +248,8 @@
   <script src="js/index.js"></script>
 <script>
 $(".col-lg-12").click(function(e) { e.stopPropagation(); });
+$(".card-footer").click(function(e) { e.stopPropagation(); });
+
     var count =0;
     $(document).on("click","#img",function() {
     

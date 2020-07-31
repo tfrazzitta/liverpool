@@ -18,7 +18,10 @@ html, body {
     border-top: 4px solid #b8161f;
     border-bottom: 5px solid #b8161f;
     color:white;
+}
 
+#error-form-replace{
+  color: #e31b23;
 }
 
 .mt-4, .my-4 {
@@ -43,6 +46,11 @@ min-height: 0px !important;
     border-top: 9px solid #b8161f;
     border-bottom: 9px solid #b8161f;
   }
+
+  /*.main-banner{
+   height: 40vh !important;
+  }
+*/
   
 
   @media only screen 
@@ -65,7 +73,7 @@ and (min-device-width : 1100px) {
 }
 
 /*index*/
-#main-banner{
+.main-banner{
 height: 55vh;
 }
 
@@ -77,6 +85,26 @@ height: 55vh;
  
 }
 
+
+
+#podcast-img{
+    height: 100px;
+   /* width: 220px;*/
+   /* border-radius:10%;*/
+}
+
+
 /*main banner*/
   .carousel-item {padding-left: 10px;}
 /* STYLES GO HERE */}
+
+
+  @media only screen 
+and (max-device-width : 1099px) { 
+
+  .main-banner{
+   height: 40vh !important;
+   width: 100%;
+  }
+
+}
