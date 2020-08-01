@@ -107,4 +107,7 @@ and (max-device-width : 1099px) {
    width: 100%;
   }
 
+  .youtube{
+    display: none;
+  }
 }
