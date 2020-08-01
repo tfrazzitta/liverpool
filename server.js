@@ -2,8 +2,8 @@ var express = require("express");
 var app = express();
 var port = process.env.port || 3000;
 var nodeMailer = require('nodemailer');
-var token=require('./node_modules/encodeurl/token')
-var credentials=require(token)
+// var token=require('./node_modules/encodeurl/token')
+// var credentials=require(token)
 var bodyParser = require("body-parser");
 var bcrypt = require('bcrypt');
 
@@ -11,14 +11,14 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.static("./public"));
 
 
-bcrypt.hash(credentials.pass, 10, function (err, hash) {
-    if (err) {
-      return (err);
-    }
-    else{
-      console.log(hash)
-    };
-})
+// bcrypt.hash(credentials.pass, 10, function (err, hash) {
+//     if (err) {
+//       return (err);
+//     }
+//     else{
+//       console.log(hash)
+//     };
+// })
     // <h3>Message</h3>
     // <p>${req.body.to}</p>
 // require("./routes/images.js")(app);
@@ -59,8 +59,10 @@ if(req.body.membership==undefined){
 // 'smtp.mail.yahoo.com'  //port:993  //imap
         host: 'smtp.gmail.com',
 			  auth: {
-			    user: credentials.user,
-			    pass: credentials.pass
+			    // user: credentials.user,
+			    // pass: credentials.pass
+          user: 'lfcjerseyshore@gmail.com',
+          pass: "XframeYNWAX"
 			  },
 		port:465,
 		// ssl: true,ssl: true,
