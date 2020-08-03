@@ -2,8 +2,10 @@ var express = require("express");
 var app = express();
 var port = process.env.PORT || 3000;
 var nodeMailer = require('nodemailer');
-var token=require('../node_modules/encodeurl/token')
-var credentials=require(token)
+var credentials=require('./node_modules/proxy-addr/credentials')
+//var token=require('./node_modules/encodeurl/token')
+
+//var credentials=require(token)
 var bodyParser = require("body-parser");
 var bcrypt = require('bcrypt');
 
