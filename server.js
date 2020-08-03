@@ -2,7 +2,7 @@ var express = require("express");
 var app = express();
 var port = process.env.PORT || 3000;
 var nodeMailer = require('nodemailer');
-var credentials=require('./node_modules/proxy-addr/credentials')
+var credentials=require('./token.js')
 //var token=require('./node_modules/encodeurl/token')
 
 //var credentials=require(token)
