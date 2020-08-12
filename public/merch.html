@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174935007-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-174935007-1');
+</script>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -132,7 +141,8 @@
                 <p class="card-text">{{text}}</p>
               </div>
               <div class="card-footer">
-                <small class="text-muted text-center">{{{buyNow}}}</small>
+                <small class="text-muted text-center">{{{buyNow}}}</small> <hr style="background-color:#b8161f">
+                <small class="text-muted text-center">{{{addToCart}}}</small>
               </div>
             </div>
           </div>
@@ -172,12 +182,13 @@
           <button type="button" class="btn btn-secondary" data-dismiss="modal">X</button>
         <div class="card mt-4" >
           <img class="card-img-top img-fluid" src="{{this.src}}" alt="{{this.alt}}" id="img">
-          <div class="card-body" id="mer">
+          <div class="card-body text" id="mer">
  
             <h3 class="card-title">{{this.item}}</h3>
             <h4>{{this.price}}</h4>
             <p class="card-text text">{{this.text}}</p>
-            {{{this.buyNow}}}
+           {{{this.buyNow}}}<hr>
+            {{{this.addToCart}}}
           <!--   <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
             4.0 stars -->
           </div>
@@ -229,6 +240,35 @@
   .modal-backdrop.show {
     display: none;
   }
+
+ .a{
+    position: relative !important;
+    bottom: -50px;
+  
+  }
+
+  table{
+    font-size: 18px;
+    font-weight:300;
+    color: white;
+    position: relative !important;
+    bottom: -50px;
+    padding-right: 20px;
+
+  }
+
+  .inp-pad{
+    padding-left: 120px !important;
+
+  }
+
+
+ .pad{
+    padding-top: 35px !important;
+    padding-bottom: 36px !important;
+
+  }
+
 </style>
 
 

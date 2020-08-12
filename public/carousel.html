@@ -34,10 +34,35 @@ $( ".carousel-control-next" ).hide()
 $( ".carousel-control-prev" ).hide()
 $( ".carousel-indicators" ).hide()
 //$( "#fs-upcoming" ).hide()
-
+var call=0;
 setInterval(function(){ 
-$( ".carousel-control-next" ).trigger( "click" );
-}, 3000);
+
+
+
+ 
+ 
+//if(call==1){
+//$('.carousel-item').css("opacity","0")
+ //=0;
+//}
+
+//else{
+ //$('.carousel-item').css("opacity","0")
+
+ $('.carousel-item').css("opacity","0")
+ setTimeout(function () {
+$('.carousel-item').css("opacity","initial")
+}, 100);
+
+ // $('.active').css("opacity","1")
+ 
+  //call++
+//}
+
+
+ $(".carousel-control-next" ).trigger( "click" );
+
+}, 10000);
 
 
 
