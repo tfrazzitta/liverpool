@@ -71,7 +71,7 @@
 
       <div class="col-lg-9">
        
-        <div id="carousel" name="CAROUSEL"></div><script>$("#carousel").load("carousel.html")</script>
+        <div id="carousel" name="CAROUSEL"></div><script>$("#carousel").load("carousel.html");document.getElementById( 'carousel' ).scrollIntoView();</script>
 
 
 
@@ -88,7 +88,7 @@
             <!-- Official Supporter's Club of the Jersey Shore  -->
          
           </div>
-          <div class="card-body">
+          <div class="card-body" id="card-body">
             <p style="font-weight: 600;">As passionate Reds fans, we are committed to growing our local New Jersey Shore LFC community by providing a memorable, family-friendly fan experience at our events.  We meet for all Liverpool matches at Jimbo's Bar and Grill on the Seaside Heights Boardwalk on the Jersey Shore.  YNWA</p>
             <!-- <small class="text-muted">Posted by Anonymous on 3/1/17</small> -->
             <hr>
@@ -152,7 +152,9 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   
   <!-- Next GAME -->
-  <script> (function (w,d,s,o,f,js,fjs) {
+  <script>
+
+   (function (w,d,s,o,f,js,fjs) {
    w['fsUpcomingEmbed']=o;w[o] = w[o] || function () { 
     (w[o].q = w[o].q || []).push(arguments) }; js = d.createElement(s), fjs = d.getElementsByTagName(s)[0]; js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs); }(window, document, 'script', 'fsUpcoming', 'https://cdn.footystats.org/embeds/upcoming.js')); fsUpcoming('params', { teamID: 151 }); </script>
 
@@ -275,6 +277,27 @@ html,.card-body,.mt-4{
 body{
   background: transparent;
 }
+
+
+
+  @media (max-device-width : 1099px) { 
+
+  .main-banner{
+/*   height: 40vh !important;*/
+   width: 100%;
+  }
+
+  .youtube{
+    display: none;
+  }
+
+h4{
+  display: none !important;
+}
+
+}
+
+
 </style>
 
 
