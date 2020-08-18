@@ -12,6 +12,11 @@ html, body {
     overflow-x: hidden;
 }
 
+#nav-logo{
+  margin-left:30px;margin-right: 0px;
+}
+
+
 
 .bg-dark,.card-header,#close-modal {
       background-color: whitesmoke;
@@ -44,6 +49,7 @@ html, body {
 textarea.input2 {
 min-height: 0px !important;
 }
+
 
 
 .card-footer {

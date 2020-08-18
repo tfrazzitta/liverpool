@@ -30,7 +30,7 @@
 </head>
 
 <body>
-  <div id="nav" name="NAVBAR"></div><script>$("#nav").load('nav.html')</script>
+  <div id="nav" name="NAVBAR"></div><script>$("#nav").load('nav.html #navs')</script>
  
 
   <div class="container">
@@ -131,21 +131,9 @@
   <!-- Footer -->
 
 
+<div id="footer" name="NAVBAR"></div><script>$("#footer").load('nav.html #footers')</script>
 
 
-
-  <footer class="py-5 bg-dark">
-    <div class="container">
-   
-<a href ="https://www.facebook.com/LFCJerseyShore/photos/?ref=page_internal"><img src="/images/facebook.png" style="width: 10%"></a>
-
-
-
-  <div id="f-footer"></div>
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
-    </div>
-    <!-- /.container -->
-  </footer>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
@@ -203,6 +191,11 @@
 </body>
 
 <style>
+/*#nav-logo{
+  margin-left:30px;margin-right: 0px;
+}
+*/
+
  .list-group-item{
   border: none !important;
   padding: 0.45rem 1.25rem
@@ -286,6 +279,11 @@ body{
 
   @media (max-device-width : 1099px) { 
 
+    #nav-logo{
+  margin-left:0px !important;margin-right: 0px;
+}
+
+
   .main-banner{
 /*   height: 40vh !important;*/
    width: 100%;
@@ -312,6 +310,10 @@ h4{
   .main-banner{
    height: 45vh !important;
   }
+
+.footer{
+  width:50%;
+}
 
 }
 
