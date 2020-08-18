@@ -12,11 +12,6 @@ html, body {
     overflow-x: hidden;
 }
 
-#nav-logo{
-  margin-left:30px;margin-right: 0px;
-}
-
-
 
 .bg-dark,.card-header,#close-modal {
       background-color: whitesmoke;
@@ -51,6 +46,9 @@ min-height: 0px !important;
 }
 
 
+#nav-logo{
+  margin-left:30px !important;margin-right: 0px;
+}
 
 .card-footer {
     background-color: #343a40!important;
