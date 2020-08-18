@@ -12,12 +12,14 @@ html, body {
     overflow-x: hidden;
 }
 
+
 .bg-dark,.card-header,#close-modal {
-     background-color: #343a40!important; 
+      background-color: whitesmoke;
+    /* background-color: #343a40!important; */
     /*background-color: #e31b23 !important;*/
     border-top: 4px solid #b8161f;
     border-bottom: 5px solid #b8161f;
-    color:white;
+    /*color:white;*/
 }
 
 #error-form-replace{
@@ -27,6 +29,7 @@ html, body {
 .mt-4, .my-4 {
     /*margin-top: 4.5rem!important;*/
     margin-top: 3.75rem!important;
+    border: none;
 }
 
 
