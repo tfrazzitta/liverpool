@@ -16,7 +16,7 @@ var context = {
 			{
 				id:1,
 				item:"LFC t-shirt",
-				price:"20.00",
+				price:"$ 20.00",
 				text: "New Official Liverpool FC heather grey t-shirt. 90% cotton / 10% polyester. Slim fit construction. Order a size up if you prefer a looser fit.",
 				src: "/images/TeeBack1.jpg",
 				alt: "/images/TeeFront.jpg",
@@ -29,7 +29,7 @@ var context = {
 			{ 
 				id:2,
 				item:"LFC Hoodie",
-				price:"45.00",
+				price:"$ 45.00",
 				text: "A classic. Bold red print on a black blend pullover hoodie. , 7.8-ounce, 50/50 cotton/poly fleece , Air jet yarn for a soft, pill-resistant finish , ...",
 				src: "/images/hoodie-back.jpg",
 				alt: "/images/hoodie-front.png",
