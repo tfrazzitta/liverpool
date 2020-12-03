@@ -36,11 +36,12 @@
   <div id="nav"></div>
   <script>$("#nav").load("nav.html #navs")</script>
   
+  <br><br><h1 class="text-center" style="color: green"> ** Christmas Special ** </h1>
+<h4 class="text-center"  style="color: red"> Free Shipping on <u>ALL</u> orders</h4>
   <script id="example-template-1" type="text/x-handlebars-template">
   <div class="container my-4" id="container">
 
     <div class="row">
-
       <div class="col-lg-1">
 
       <!--   <h4 class="my-4">Merchandise</h4> -->
@@ -90,7 +91,7 @@
 <!--  <div class="boom"></div> -->
 <!-- <script id="example-template-1" type="text/x-handlebars-template"> -->
 {{#each merchandise}}
-          <div class="col-lg-4 col-md-6 mb-4">
+          <div class="col-lg-6 col-md-6 mb-4">
             <div class="card h-100">
               <a href="#"><img class="card-img-top img-fluid click" src="{{src}}" id="{{id}}" num="{{@index}}"></a><hr>
               <div class="card-body">
@@ -106,6 +107,9 @@
               </div>
             </div>
           </div>
+
+
+
 {{/each}}
 </script>
 
